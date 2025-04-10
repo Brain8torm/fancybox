@@ -78,6 +78,14 @@
       url: function (rez) {
         return "//maps.google." + rez[2] + "/maps?q=" + rez[5].replace("query=", "q=").replace("api=1", "") + "&output=embed";
       }
+    },
+
+    rutube: {
+      matcher: /https?:\/\/rutube\.ru\/(play\/embed|video)\/([a-zA-Z0-9]{32})/i,
+      type: "iframe",
+      url: function (rez) {
+        return "//rutube\.ru/play/embed/"+rez[1]+"/";
+      }
     }
   };
 
